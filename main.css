@@ -1,0 +1,29 @@
+body {
+    background-color: blanchedalmond;
+    color: maroon;
+    font-family: Arial;
+    margin: 0px;
+}
+
+header {
+    background-color: Black;
+    color: rgb(252, 195, 195);
+    font-family: Arial;
+    padding: 20px;
+    font-size: 26px;
+    text-align: center; 
+}
+
+footer {
+    background-color:Black;
+    color:rgb(232, 188, 188); 
+    padding: 20px; 
+    font-size: 16pt; 
+    font-style: italic;
+    text-align: right;
+}
+
+a {
+    text-decoration: none; 
+    color: green;
+}
