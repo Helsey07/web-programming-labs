@@ -14,12 +14,48 @@ header {
     text-align: center; 
 }
 
+header:hover {
+    background: linear-gradient(to right bottom,  rgb(252, 94, 252), rgb(238, 2, 238),  purple);
+    color: rgb(86, 86, 86);
+    font-family: Arial;
+    padding: 26px;
+    font-size: 100px;
+    text-align: center; 
+}
+
+header:active {
+    background: linear-gradient(to right bottom,  rgb(39, 213, 62),  rgb(58, 141, 58),  rgb(29, 82, 15));
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    padding: 26px;
+    font-size: 70px;
+    text-align: center;
+}
+
 footer {
     background-color:Black;
     color:rgb(232, 188, 188); 
     padding: 20px; 
     font-size: 16pt; 
     font-style: italic;
+    text-align: right;
+}
+
+footer:hover {
+    background: linear-gradient(to right bottom,  rgb(252, 94, 252), rgb(238, 2, 238),  purple);
+    color: rgb(86, 86, 86);
+    font-family: Arial;
+    padding: 26px;
+    font-size: 50px;
+    text-align: right; 
+}
+
+footer:active {
+    background: linear-gradient(to right bottom,  rgb(39, 213, 62),  rgb(58, 141, 58),  rgb(29, 82, 15));
+    color: rgb(255, 255, 255);
+    font-family: Arial;
+    padding: 26px;
+    font-size: 40px;
     text-align: right;
 }
 
