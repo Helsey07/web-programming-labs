@@ -35,10 +35,14 @@ header:active {
 footer {
     background-color:Black;
     color:rgb(232, 188, 188); 
-    padding: 20px; 
+    padding: 20px 10px 30px 0px; 
     font-size: 16pt; 
     font-style: italic;
     text-align: right;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+    z-index: 100;
 }
 
 footer:hover {
