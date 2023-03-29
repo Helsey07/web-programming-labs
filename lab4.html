@@ -11,6 +11,7 @@
     <style>
         div {
             text-align: justify;
+            background-color: rgb(184, 187, 188);
             text-indent: 1.25cm;
             line-height: 150%;
             margin: 20px;
@@ -21,7 +22,22 @@
             height: 200px;
             overflow-x: hidden;
             overflow-y: auto;
+            position: relative;
+            z-index: 2;
 
+        }
+        .second{
+            left: 350px;
+            top: 200px;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .second:hover{
+            left: 350px;
+            top: 200px;
+            position: fixed;
+            z-index: 3;
         }
     </style>
 
@@ -43,7 +59,7 @@
             Финансовые рынки – это в первую очередь интересно.  
         </div>
 
-        <div>
+        <div class="second">
             Сперва я должен сказать, что не вся информация в книге собрана лично мной: примерно 2/3
             книги основаны на моих лекциях курса «Международные фондовые рынки» в магистратуре 
             престижного вуза, а 2/3 этих лекций, в свою очередь, основаны на курсе нобелевского 
