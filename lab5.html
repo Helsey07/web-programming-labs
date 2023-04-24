@@ -15,6 +15,10 @@
             alert('Сумма '+ a +' и '+ b +' равна ' + result);
         }
 
+        function showAutor() {
+            let autor = 'Всем привет ДОРОГИЕ ДРУЗЬЯ!!!\nАвтор страницы:\nПетровичев Егор Васильевич'
+            alert(autor)
+        }
     </script>
 
     <style>
@@ -33,7 +37,7 @@
     </style>
 </head>
 <body>
-    <header>
+    <header onclick="showAutor()">
         НГТУ, ФБ, Лабораторная работа №5
     </header>
 
@@ -42,13 +46,13 @@
             Сколько будет 5154+7891?
         </div>
 
-        <div class="massage">
+        <div class="massage" onclick="showAutor()">
             Узнать, кто автор страницы
         </div>
 
     </main>
 
-    <footer>
+    <footer onclick="showAutor()">
         &copy;Петровичев Егор, ФБИ-13, 2 курс, 2023
     </footer>
 </body>
