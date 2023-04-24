@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петровичев Егор Васильевич. Лабораторная работа №5</title>
     <link rel="stylesheet" href="main.css">
+
+    <script>
+        function showSum() {
+            let a = 5154;
+            let b = 7891;
+            let result = a + b;
+            alert('Сумма '+ a +' и '+ b +' равна ' + result);
+        }
+
+    </script>
+
+    <style>
+        .massage {
+            background-color: aquamarine;
+            border: 2px solid;
+            border-radius: 6px;
+            border-color: black;
+            width: 300px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            display: inline-block;
+            cursor:pointer;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,6 +38,13 @@
     </header>
 
     <main>
+        <div class="massage" onclick="showSum()">
+            Сколько будет 5154+7891?
+        </div>
+
+        <div class="massage">
+            Узнать, кто автор страницы
+        </div>
 
     </main>
 
