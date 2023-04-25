@@ -48,6 +48,28 @@
             alert('Деление '+ a +' на '+ b +' равно ' + result) 
         }
 
+        function Fruits() {
+            let AppleQuantity = document.getElementById('apple');
+            let PearQuantity = document.getElementById('pear');
+            let OrangeQuantity = document.getElementById('orange');
+            let MelonQuantity = document.getElementById('melon');
+
+            let a = parseInt(AppleQuantity.value);
+            let p = parseInt(PearQuantity.value);
+            let o = parseInt(OrangeQuantity.value);
+            let m = parseInt(MelonQuantity.value);
+
+            let MultApple = a *100
+            let MultPear = p *80
+            let MultOrange = o *150
+            let MultMelon = m *300
+
+            let TotalAmount = MultApple + MultPear + MultOrange + MultMelon;
+            let output = document.getElementById('itog')
+            output.innerHTML = 'Итоговая сумма: ' + TotalAmount + '&#8381;'
+
+        }
+
         function showAutor() {
             let autor = 'Всем привет ДОРОГИЕ ДРУЗЬЯ!!!\nАвтор страницы:\nПетровичев Егор Васильевич'
             alert(autor)
@@ -80,6 +102,13 @@
             border: 3px solid;
             width: 300px;
             height: 40px;
+        }
+
+        #basket {
+            border: 3px solid;
+            width: 300px;
+            height: 350px;
+            text-align: center;
         }
 
     </style>
@@ -121,6 +150,26 @@
         </div>
 
         <div id="output"></div>
+
+        <div id="basket">
+            <h1>Корзина товаров</h1><br>
+
+            Яблоки(100р/шт)<br>
+            <label><input type="number" value="0" id="apple"></label><br>
+
+            Груши(80р/шт)<br>
+            <label><input type="number" value="0" id="pear"></label><br>
+
+            Апельсины(150/шт)<br>
+            <label><input type="number" value="0" id="orange"></label><br>
+
+            Дыни(300р/шт)<br>
+            <label><input type="number" value="0" id="melon"></label><br>
+
+            <input type="button" value="Рассчитать" onclick="Fruits()"><br>
+
+            <div id = 'itog'>Итоговая сумма: 0 &#8381;</div>
+        </div>
 
     </main>
 
