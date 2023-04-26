@@ -6,6 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Петровичев Егор Васильевич, Лабораторная 6</title>
     <link rel="stylesheet" href="main.css">
+
+    <script>
+        let number;
+        let count = 0;
+
+        function StartGame() {
+            number =Math.floor(Math.random() * 100) + 1;
+            let screens = document.getElementsByClassName('game');
+            screens[0].style.display = 'none';
+            screens[1].style.display = 'block';
+        }
+
+        function guess() {
+            count++;
+            let input = document.getElementById('user-number');
+            let userNumber = parseInt(input.value);
+            let massage = document.getElementById('result');
+            if (userNumber > 100) {
+                massage.innerHTML = 'Вы не правы! число должно быть меньше 100 и больше 1.'
+                count = 0;
+            }
+            else if (userNumber < 1) {
+                massage.innerHTML = 'Вы не правы! число дожно быть больше 1 и меньше 100'
+                count = 0;
+            }
+
+            else if (isNaN(userNumber)) {
+                massage.innerHTML = 'ТЫ МЕНЯ НЕ ПРОВЕДЁШЬ! Давай-давай, отгадывай...'
+                count = 0;
+            }
+
+            else if (userNumber > number) {
+                massage.innerHTML = 'Вы ввели слишком больше число';
+            }
+            else if (userNumber < number) {
+                massage.innerHTML = 'Вы ввели слишком маленькое число';
+            }
+            else {
+                let screens = document.getElementsByClassName('game');
+                screens[1].style.display = 'none';
+                screens[2].style.display = 'block';
+                document.getElementById('number').innerHTML = number;
+                document.getElementById('try-count').innerHTML = count;
+            }
+        }
+
+        function again() {
+            let screens = document.getElementsByClassName('game');
+            screens[2].style.display = 'none';
+            screens[1].style.display = 'block';
+            count = 0;
+            number =Math.floor(Math.random() *100) + 1;
+            document.getElementById('result').innerHTML = '';
+
+        }
+
+    </script>
+
+    <style>
+        .game{
+            width: 500px;
+            height: auto;
+            position: relative;
+            top: 30%;
+            left: 30%;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 20px;  
+            background-color: rgb(216, 154, 154);          
+        }
+
+        button{
+            border-radius: 5px;
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +91,32 @@
     </header>
 
     <main>
+        <div class="game">
+            <button onclick="StartGame()">Сыграть в игру</button>
+        </div>
 
+        <div class="game" style="display: none">
+            Задумано число от 1 до 100. Угадайте, какое?<br>
+            <input type="number" value="" min="1" max="100" id="user-number"><br>
+            <button onclick="guess()">Угадать</button>
+            <div id="result"></div>
+        </div>
+
+        <div class="game" style="display: none;">
+            <h1>Поздравляем, вы выйграли печеньку!</h1>
+            
+            <div>
+                Задуманное число: <span id="number"></span>
+            </div>
+
+            <div>
+                Количество попыток: <span id="try-count"></span>
+            </div>
+
+            <div>
+                <button onclick="again()">Сыграть ещё раз</button>
+            </div>
+        </div>
     </main>
 
     <footer>
