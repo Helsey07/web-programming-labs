@@ -112,16 +112,113 @@
         function Cube_one(div) {
             if (div.style.left == '0%') {
                 div.style.left = '90%';
-                div.style.transition = '4s'
-                div.style.transform = "rotate(4turn)"
+                div.style.transition = '4s';
+                div.style.transform = "rotate(4turn)";
             }
 
-            else if (div.style.left = '90%') {
+            else {
                 div.style.left = '0%';
-                div.style.transition = '4s'
-                div.style.transform = "rotate(0turn)"
+                div.style.transition = '4s';
+                div.style.transform = "rotate(0turn)";
             }
 
+        }
+
+        function block_2(div) {
+            if (div.style.width == '100px') {
+                div.style.width = '150px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '150px') {
+                div.style.width = '200px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '200px') {
+                div.style.width = '250px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '250px') {
+                div.style.width = '300px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '300px') {
+                div.style.width = '350px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '350px') {
+                div.style.width = '400px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '400px') {
+                div.style.width = '450px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '450px') {
+                div.style.width = '500px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '500px') {
+                div.style.width = '550px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '550px') {
+                div.style.width = '600px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '600px') {
+                div.style.width = '650px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '650px') {
+                div.style.width = '700px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '700px') {
+                div.style.width = '750px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '750px') {
+                div.style.width = '800px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '800px') {
+                div.style.width = '850px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '850px') {
+                div.style.width = '900px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '900px') {
+                div.style.width = '950px';
+                div.style.transition = '1s';
+            }
+
+            else if (div.style.width == '950px') {
+                div.style.width = '1000px';
+                div.style.transition = '1s';
+            }
+
+            else {
+                div.style.width = '100px';
+                div.style.transition = '1s';
+            }
         }
 
     </script>
@@ -184,6 +281,14 @@
             position: relative;
             left: 0%;
         }
+
+        .block_2{
+            width: 100px;
+            cursor: pointer;
+            background-color: green;
+            color: beige;
+            border: 2px solid black;
+        }
     </style>
 </head>
 <body>
@@ -239,8 +344,12 @@
             Сделайте двойной щелчок, чтобы сменить цвет.
         </div>
         
-        <div class="cube" ondblclick="Cube_one(this)">
+        <div class="cube" onclick="Cube_one(this)">
             Нажми на меня
+        </div>
+
+        <div class="block_2" onclick="block_2(this)">
+            Блок
         </div>
     </main>
 
