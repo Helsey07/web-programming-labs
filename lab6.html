@@ -109,6 +109,21 @@
             }
         }
 
+        function Cube_one(div) {
+            if (div.style.left == '0%') {
+                div.style.left = '90%';
+                div.style.transition = '4s'
+                div.style.transform = "rotate(4turn)"
+            }
+
+            else if (div.style.left = '90%') {
+                div.style.left = '0%';
+                div.style.transition = '4s'
+                div.style.transform = "rotate(0turn)"
+            }
+
+        }
+
     </script>
 
     <style>
@@ -156,6 +171,18 @@
             border: 2px solid black;
             border-radius: 20px;  
             background-color: yellow; 
+        }
+        .cube{
+            border: 2px solid black;
+            background-color: green;
+            color: azure;
+            cursor:pointer;
+            width: 150px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            position: relative;
+            left: 0%;
         }
     </style>
 </head>
@@ -212,6 +239,9 @@
             Сделайте двойной щелчок, чтобы сменить цвет.
         </div>
         
+        <div class="cube" ondblclick="Cube_one(this)">
+            Нажми на меня
+        </div>
     </main>
 
     <footer>
