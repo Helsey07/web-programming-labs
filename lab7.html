@@ -51,10 +51,36 @@
             opacity += 0.1;
         }
     }
+
+    function red_green(){
+        let chislo = document.getElementById('chislo').value;
+        let color_block = document.getElementById('color_block');
+        for(let i=0; i<chislo; i++){
+            let block = document.createElement('div');
+            block.innerHTML = 'Блок №' + (i+1);
+            block.style.borderRadius = '50%';
+            block.style.padding = '20px';
+            block.style.margin = '20px';
+            block.style.textAlign = 'center';
+            block.style.width = '100px';
+            block.style.height = '100px';
+            block.style.lineHeight = '100px';
+            block.style.color = 'black';
+
+            if (i%2){
+                block.style.background = 'yellow'
+            }
+            else{
+                block.style.background = 'blue'
+            }
+            color_block.appendChild(block);
+        }
+        
+    }
 </script>
 
 <style>
-
+    
 </style>
 
 <body>
@@ -73,8 +99,12 @@
         <table border="1" id="dollar-exchange"></table>
         <div id="detail"></div>
 
-        <button onclick="addTransparentBlocks(this)">Создание прозначных блоков</button>
+        <button onclick="addTransparentBlocks()">Создание прозначных блоков</button>
         <div id="transparent_blocks"></div>
+
+        <input id="chislo" type="number" value="5" placeholder="Введите число кругов">
+        <button onclick="red_green()">Синий/Желтый</button>
+        <div id="color_block"></div>
     </main>
 
     <footer>
