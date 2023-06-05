@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Петровичев Егор Васильевич. Лабораторная работа №7</title>
     <link rel="stylesheet" href="main.css">
 
 </head>
@@ -74,8 +74,17 @@
                 block.style.background = 'blue'
             }
             color_block.appendChild(block);
-        }
+        } 
+    }
+
+    function TableMultiplication(){
+        let numbers = document.getElementById('numbers');
+        for(let i=12; i<33; i++){
+            let number = document.createElement('div');
+            number.innerHTML = (i+1) + '* 62' + '= ' + (i+1)*62;
         
+            numbers.appendChild(number);
+        }   
     }
 </script>
 
@@ -106,6 +115,9 @@
         <button onclick="red_green()">Синий/Желтый</button>
         <div id="color_block"></div>
     </main>
+
+    <button onclick="TableMultiplication()">Таблица умножения</button>
+    <div id="numbers"></div>
 
     <footer>
         &copy; Петровичев Егор Васильевич, ФБИ-13, 2 курс, 2023
